@@ -36,7 +36,7 @@ const Question = () => {
     const handleGet = async () => {
         setIsLoading(true);  // 로딩 상태 시작
         try {
-            const response = await axios.get('http://springboot-developer-env.eba-yxau3zsf.ap-northeast-2.elasticbeanstalk.com/bot/sports_tendency_survey_chat?', { params: answers });
+            const response = await axios.get('https://springboot-developer-env.eba-yxau3zsf.ap-northeast-2.elasticbeanstalk.com/bot/sports_tendency_survey_chat?', { params: answers });
             console.log('Response:', response.data);
 
             // Navigate to AboutSport with data
