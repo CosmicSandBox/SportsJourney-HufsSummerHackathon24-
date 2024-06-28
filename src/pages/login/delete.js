@@ -17,7 +17,7 @@ const Delete = () => {
 
     const handleSubmit = async () => {
         try {
-            const response = await axios.delete(`http://springboot-developer-env.eba-yxau3zsf.ap-northeast-2.elasticbeanstalk.com/delete_user?userId=${userId}`);
+            const response = await axios.delete(`https://springboot-developer-env.eba-yxau3zsf.ap-northeast-2.elasticbeanstalk.com/delete_user?userId=${userId}`);
             console.log('Response:', response.data);
             setErrorMessage('');  // Clear any previous error message
             navigate('/login');  // Navigate to /login on successful deletion

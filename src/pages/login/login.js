@@ -30,7 +30,7 @@ const Login = () => {
 
     const handleSubmit = async () => {
         try {
-            const response = await axios.get('http://springboot-developer-env.eba-yxau3zsf.ap-northeast-2.elasticbeanstalk.com/login?', {
+            const response = await axios.get('https://springboot-developer-env.eba-yxau3zsf.ap-northeast-2.elasticbeanstalk.com/login?', {
                 params: {
                     id,
                     password
