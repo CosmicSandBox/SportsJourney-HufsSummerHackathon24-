@@ -35,7 +35,7 @@ const SignUp = () => {
             if (error.response && error.response.status === 409) {
                 setErrorMessage('사용자가 이미 존재합니다. 다른 이름을 사용해 주세요.');
             } else {
-                setErrorMessage('로그인 중 오류가 발생했습니다. 다시 시도해 주세요.');
+                setErrorMessage('회원가입 중 오류가 발생했습니다. 다시 시도해 주세요.');
             }
         }
     };
@@ -48,7 +48,7 @@ const SignUp = () => {
         <Container>
             <AppBar />
             <BigLogo 
-                src = "../../../images/logo_icon.svg"
+                src="../../../images/logo_icon.svg"
             />
             <ColumnContainer>
                 <LoginContainer>
@@ -72,7 +72,6 @@ const SignUp = () => {
     );
 };
 
-
 const BigLogo = styled.img`
     width: 25rem;
     height: 13rem;
@@ -87,7 +86,7 @@ const Container = styled.div`
 const ColumnContainer = styled.div`
     display: flex;
     flex-direction: column;
-`
+`;
 
 const LoginContainer = styled.div`
     display: flex;
