@@ -23,7 +23,7 @@ const SignUp = () => {
 
     const handleSubmit = async () => {
         try {
-            const response = await axios.post('https://springboot-developer-env.eba-yxau3zsf.ap-northeast-2.elasticbeanstalk.com/create', {
+            const response = await axios.post('http://springboot-developer-env.eba-yxau3zsf.ap-northeast-2.elasticbeanstalk.com/create', {
                 userId,
                 password,
             });
