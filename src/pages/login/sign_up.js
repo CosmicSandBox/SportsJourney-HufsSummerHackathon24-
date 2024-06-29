@@ -23,7 +23,7 @@ const SignUp = () => {
 
     const handleSubmit = async () => {
         try {
-            const response = await axios.post('https://hyunwoo9939.shop/create', {
+            const response = await axios.post('https://hyunwoo9930.shop/create', {
                 userId,
                 password,
             });
