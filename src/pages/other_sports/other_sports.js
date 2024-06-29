@@ -12,7 +12,7 @@ const OtherSports = () => {
     useEffect(() => {
         const fetchSportsData = async () => {
             try {
-                const response = await axios.get('https://springboot-developer-env.eba-yxau3zsf.ap-northeast-2.elasticbeanstalk.com/get_all_sports');
+                const response = await axios.get('https://hyunwoo9930.shop/get_all_sports');
                 setSportsData(response.data);
             } catch (error) {
                 console.error('Error fetching sports data:', error);

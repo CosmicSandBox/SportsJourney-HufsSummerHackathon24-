@@ -32,7 +32,7 @@ const ChangePw = () => {
         setError('');  // Clear any previous errors
         try {
             const response = await axios.put(
-                'https://springboot-developer-env.eba-yxau3zsf.ap-northeast-2.elasticbeanstalk.com/update_password',
+                'https://hyunwoo9930.shop/update_password',
                 null,
                 {
                     params: {
