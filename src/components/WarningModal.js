@@ -7,17 +7,13 @@ const Modal = ({ onClose }) => {
         <ModalOverlay>
             <ModalContent>
                 <ColumnContainer>
-                    <Title>주의사항</Title>
+                    <Title>만든 이들</Title>
                     <Content>
-                        - 차량번호가 다르면 <br/>탑승하지 말것 <br/><br/>
-                        - 정보와 다른 주최자 <br/>ex) 경로, 성별 등<br />미심쩍은 경우 탑승금지 <br/><br/>
-                        - 탑승 전 송금을 <br/>완료하세요!<br/><br/>
-                        - 카풀 제공자의 음주<br/>여부 확인<br/><br/>
-                        - 사전에 합의된 탑승인원,<br/>경로, 금액을 지키는<br/>매너를 보여주세요<br/><br/>
-                        - Boo릉은 카풀 중개<br/>서비스일 뿐이며, <br/> 관련범죄 발생시 <br/> 책임지지 않습니다.  
+                        똑살 팀<br/><br/>
+                        김재우, 오현우
                     </Content>
                 </ColumnContainer>
-                <CommonButton text={"숙지하였습니다."} onClick={onClose} />
+                <CommonButton text={"닫기."} onClick={onClose} />
             </ModalContent>
         </ModalOverlay>
     );
@@ -28,9 +24,10 @@ export default Modal;
 const ColumnContainer = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     align-items: center;
-    margin-bottom: 4rem;
+    gap: 10rem;
+    align-items: center;
+    margin-bottom: 10rem;
 `;
 
 const Title = styled.p`
@@ -79,4 +76,7 @@ const ModalContent = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-radius: 10%;
+    border-color: black;
+    border-width: 0.2rem;
 `;

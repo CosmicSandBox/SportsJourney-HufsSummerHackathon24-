@@ -3,7 +3,7 @@ import styled from "styled-components";
 import AppBar from '../../components/AppBarLogin';
 import NameBox from './components/LoginContainer';
 import PwBox from './components/LoginContainer';
-import LoginButton from '../../components/CommonButtonLogin'
+import LoginButton from '../../components/CommonButton'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -53,7 +53,7 @@ const SignUp = () => {
             <ColumnContainer>
                 <LoginContainer>
                     <NameBox
-                        subtitle={"이름 입력"} 
+                        subtitle={"아이디 입력"} 
                         content={userId} 
                         onChange={handleUserIdPost} 
                     />

@@ -22,10 +22,7 @@ const Button = styled.button`
     // 정렬 속성
 
     margin-left: 5.88rem;
-    position: absolute;
-    bottom: 13rem;
-    transform: translate(0,70px);  //민석 버튼 옮김 
-
+    position: relative;
     // text prop 속성
     display: flex;
     align-items: center;    //글자 상하 가운데 정렬

@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
 
-const CommonButton = ({ text, onClick }) => {
+const CommonButtonDelete = ({ text, onClick }) => {
     return (
         <Button onClick={onClick}>
             {text}
@@ -9,7 +9,7 @@ const CommonButton = ({ text, onClick }) => {
     );
 };
 
-export default CommonButton;
+export default CommonButtonDelete;
 
 const Button = styled.button`
     // 디자인 속성

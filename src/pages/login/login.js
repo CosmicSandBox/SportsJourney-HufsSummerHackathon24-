@@ -5,7 +5,8 @@ import NameBox from './components/LoginContainer';
 import PwBox from './components/LoginContainer';
 import LoginButton from '../../components/CommonButtonLogin';
 import SignUpButton from '../../components/CommonButtonSignUp';
-import GoChangePwButton from '../../components/CommonButton';
+import GoChangePwButton from '../../components/CommonButtonChange';
+import DeleteButton from '../../components/CommonButtonDelete';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -14,11 +15,6 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
-
-    const handleGoDelete = () => {
-        navigate('/delete');
-    };
-
 
     const handleIdPost = (e) => {
         setId(e.target.value);
@@ -59,9 +55,11 @@ const Login = () => {
 
     const handleGoSignUp = () => {
         navigate('/signup');
-    }
+    };
 
-
+    const handleGoDelete = () => {
+        navigate('/delete');
+    };
 
     return (
         <Container>
@@ -72,7 +70,7 @@ const Login = () => {
             <ColumnContainer>
                 <LoginContainer>
                     <NameBox
-                        subtitle={"이름 입력"} 
+                        subtitle={"아이디 입력"} 
                         content={id} 
                         onChange={handleIdPost} 
                     />
@@ -82,15 +80,24 @@ const Login = () => {
                         onChange={handlePasswordPost} 
                     />
                 </LoginContainer>
-                <LoginButton onClick={handleSubmit} text={"로그인"}/>
-                <SignUpButton onClick={handleGoSignUp} text={"회원가입"}/>
                 {errorMessage && <ErrorText>{errorMessage}</ErrorText>}
-                <GoChangePwButton onClick={handleGoChangePassword} text={"비밀번호 변경"}/>
+                <ButtonContainer>
+                    <LoginButton onClick={handleSubmit} text={"로그인"}/>
+                    <SignUpButton onClick={handleGoSignUp} text={"회원가입"}/>
+                    <GoChangePwButton onClick={handleGoChangePassword} text={"비밀번호 변경"}/>
+                    <DeleteButton onClick={handleGoDelete} text={"아이디 삭제"}/>
+                </ButtonContainer>
             </ColumnContainer>
         </Container>
     );
 };
 
+const ButtonContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1rem;
+`;
 
 const BigLogo = styled.img`
     width: 25rem;
@@ -106,7 +113,7 @@ const Container = styled.div`
 const ColumnContainer = styled.div`
     display: flex;
     flex-direction: column;
-`
+`;
 
 const LoginContainer = styled.div`
     display: flex;
@@ -119,6 +126,7 @@ const LoginContainer = styled.div`
 const ErrorText = styled.p`
     color: red;
     margin-top: 1rem;
+    margin-left: 1rem;  // Add margin-left for indentation
 `;
 
 export default Login;

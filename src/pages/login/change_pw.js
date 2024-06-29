@@ -69,7 +69,7 @@ const ChangePw = () => {
             <ColumnContainer>
                 <LoginContainer>
                     <NameBox
-                        subtitle={"이름을 입력하세요."} 
+                        subtitle={"아이디를 입력하세요."} 
                         content={userId} 
                         onChange={handleUserIdPost} 
                     />

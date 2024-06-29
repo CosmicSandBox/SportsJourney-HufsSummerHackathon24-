@@ -21,17 +21,9 @@ const Landing = () => {
                 />
                 <TextContainer> 
                     <StyledParagraph>
-                        Boo릉은<br />
-                        학우들 간 차량 공유를 통해<br />
-                        보다 더 많은 학우들이<br />
-                        편하게 카풀을 이용할 수 있는<br />
-                        서비스 입니다.<br /><br />
-                        
-                        차량공유를 통해<br />
-                        친목도 쌓을수 있다는 사실!!!<br /><br />
-
-                        Boo릉과 함께<br />
-                        행복한 카풀을 경험하세요!<br /><br /> 
+                        Sports Journey에서는<br />똑똑한 AI가 나에게 어울리는<br />스포츠를 찾아주고,<br /><br />
+                        세계 여러 각국의<br />특색있는 스포츠를 소개해줍니다.<br /><br />
+                        또한, 해당 스포츠에 대한<br />튜토리얼과 영상을 제공하여<br />스스로 배울 수 있게<br />도와줍니다.
                         </StyledParagraph>
                 </TextContainer>
             <CommonButton onClick = {goToloading} text={"시작!"}/>

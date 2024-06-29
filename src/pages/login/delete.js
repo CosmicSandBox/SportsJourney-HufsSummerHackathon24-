@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from "styled-components";
 import AppBar from '../../components/AppBarLogin';
 import NameBox from './components/LoginContainer';
-import DeleteButton from '../../components/CommonButtonLogin';
+import DeleteButton from '../../components/CommonButton';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -40,7 +40,7 @@ const Delete = () => {
             <ColumnContainer>
                 <LoginContainer>
                     <NameBox
-                        subtitle="이름 입력" 
+                        subtitle="아이디 입력" 
                         content={userId} 
                         onChange={handleUserIdPost} 
                     />
@@ -74,7 +74,7 @@ const LoginContainer = styled.div`
     margin-top: 5rem;
     gap: 2rem;
     margin-left: 0.9rem;
-    margin-top: 4rem;
+    margin-top: 10rem;
 `;
 
 const ErrorText = styled.p`
